@@ -6,6 +6,8 @@
 
 ## MVP
 
+-[] Redux Store
+
 -[] TDD: Jest/Enzyme Unit Testing
 
 -[] UI Components w Chakra UI
