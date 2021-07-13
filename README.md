@@ -4,6 +4,13 @@
 
 ## MVP
 
+## MVP
+
+-[] TDD: Jest/Enzyme Unit Testing
+
+-[] UI Components w Chakra UI
+
+-[] Hi There
 - [ ] TDD: Jest/Enzyme Unit Testing
 
 - [ ] UI Components w Chakra UI
