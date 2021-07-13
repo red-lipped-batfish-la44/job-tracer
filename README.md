@@ -7,3 +7,7 @@
 - [ ] TDD: Jest/Enzyme Unit Testing
 
 - [ ] UI Components w Chakra UI
+
+- [ ] Finish Edit Job Post Functionality
+
+- [ ] Filter Job List By status, last updated
