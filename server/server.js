@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const express = require('express');
 
 const app = express();
@@ -9,6 +8,7 @@ const PORT = 3000;
 // start server
 
 app.listen(PORT, () => {
+  // eslint-disable-next-line no-console
   console.log(`🚀 Server started on port ${PORT}`);
 });
 
@@ -35,6 +35,7 @@ app.use((err, req, res) => {
     message: { err: 'An error occurred' },
   };
   const errorObj = { ...defaultErr, ...err };
+  // eslint-disable-next-line no-console
   console.log(errorObj.log);
   return res.status(errorObj.status).json(errorObj.message);
 });
