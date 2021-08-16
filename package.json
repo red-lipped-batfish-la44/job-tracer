@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"webpack serve --hot --open\"  \"nodemon server/server.js\"",
+    "dev": "cross-env NODE_ENV=development concurrently \"webpack serve  --open\"  \"nodemon server/server.js\"",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix . ",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest --verbose --watch"
   },
   "lint-staged": {
     "client/**/*.{js,jsx}": [
@@ -23,6 +24,11 @@
     ],
     "*.js": "eslint --cache --fix"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/red-lipped-batfish-la44/job-tracer.git"
@@ -34,18 +40,28 @@
   },
   "homepage": "https://github.com/red-lipped-batfish-la44/job-tracer#readme",
   "dependencies": {
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "pg": "^8.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
+    "react-modal": "^3.14.3",
+    "react-redux": "^5.0.7",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
+    "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
     "concurrently": "^6.2.0",
     "cross-env": "^6.0.3",
@@ -53,15 +69,18 @@
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
+    "jest": "^27.0.6",
     "lint-staged": "^11.0.0",
     "nodemon": "^2.0.11",
     "prettier-eslint": "^12.0.0",
+    "react-addons-test-utils": "^15.6.2",
     "style-loader": "^3.0.0",
     "webpack": "^5.44.0",
     "webpack-cli": "^4.7.2",

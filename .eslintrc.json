@@ -2,7 +2,8 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2020": true
+    "es2020": true,
+    "jest/globals": true
   },
   "extends": [
     "airbnb",
@@ -18,10 +19,12 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "jest"],
   "rules": {
-    "react/forbid-prop-types": 0,
     "prettier/prettier": "error",
+    "react/destructuring-assignment": "off",
+    "no-console": "warn",
+    "react/prop-types": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
 }
